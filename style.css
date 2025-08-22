@@ -1,0 +1,148 @@
+/* 全体 */
+body {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: #fff;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  text-align: right;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Hero */
+.hero {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url("top.jpg") no-repeat center center/cover;
+  color: white;
+  position: relative;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+.hero-text {
+  position: relative;
+  z-index: 1;
+  padding: 1rem;
+}
+
+/* Menu */
+.menu, .instructor, .price, .contact {
+  padding: 3rem 2rem;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: #fff;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+.menu-img-large {
+  width: 160px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.menu-info h4 {
+  margin: 0 0 .5rem;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.menu-info p {
+  margin: 0;
+  color: #666;
+  line-height: 1.5;
+  font-size: .95rem;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  .menu-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  .menu-img-large {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Instructor */
+.instructor-profile {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.instructor-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* LINEボタン */
+.line-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #06C755;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #f8f8f8;
+  margin-top: 2rem;
+}
